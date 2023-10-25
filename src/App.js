@@ -47,6 +47,7 @@ export default function App() {
       </div>
       {activeId && (
         <MemoEditor
+          key={activeId}
           activeId={activeId}
           setActiveId={setActiveId}
           memos={memos}
