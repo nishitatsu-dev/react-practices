@@ -2,11 +2,6 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import MemoEditor from "./MemoEditor";
 
-function initialMemos() {
-  const memosString = localStorage.getItem("memoApp");
-  return memosString ? JSON.parse(memosString) : [];
-}
-
 export default function App() {
   const [memos, setMemos] = useState(() => initialMemos());
   const [activeId, setActiveId] = useState(null);
@@ -27,6 +22,11 @@ export default function App() {
       </span>
     </li>
   ));
+
+  function initialMemos() {
+    const memosString = localStorage.getItem("memoApp");
+    return memosString ? JSON.parse(memosString) : [];
+  }
 
   function handleAddMemo() {
     setMemos([...memos, { id: nextId, title: "新規メモ", body: "" }]);
