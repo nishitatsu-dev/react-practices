@@ -38,7 +38,7 @@ export default function App() {
       <div className={"memo-list"}>
         <ul>
           {allMemos}
-          <li key={"add"}>
+          <li>
             <span className={"li-add"} onClick={handleAddMemo}>
               ＋
             </span>
