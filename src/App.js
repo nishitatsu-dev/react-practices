@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
+import { LoginProvider } from "./LoginProvider.js";
 import MemoEditor from "./MemoEditor";
 
 export default function App() {
@@ -35,25 +36,27 @@ export default function App() {
 
   return (
     <>
-      <div className={"memo-list"}>
-        <ul>
-          {allMemos}
-          <li>
-            <span className={"li-add"} onClick={handleAddMemo}>
-              ＋
-            </span>
-          </li>
-        </ul>
-      </div>
-      {activeId && (
-        <MemoEditor
-          key={activeId}
-          activeId={activeId}
-          setActiveId={setActiveId}
-          memos={memos}
-          setMemos={setMemos}
-        />
-      )}
+      <LoginProvider>
+        <div className={"memo-list"}>
+          <ul>
+            {allMemos}
+            <li>
+              <span className={"li-add"} onClick={handleAddMemo}>
+                ＋
+              </span>
+            </li>
+          </ul>
+        </div>
+        {activeId && (
+          <MemoEditor
+            key={activeId}
+            activeId={activeId}
+            setActiveId={setActiveId}
+            memos={memos}
+            setMemos={setMemos}
+          />
+        )}
+      </LoginProvider>
     </>
   );
 }
