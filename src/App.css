@@ -1,0 +1,45 @@
+.memo-list,
+.memo-editor {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.memo-list {
+  width: 30%;
+}
+
+.memo-editor {
+  width: 70%;
+}
+
+textarea {
+  display: block;
+  height: 15em;
+  width: 100%;
+}
+
+button[type="submit"] {
+  width: 75%;
+}
+
+button[type="button"] {
+  width: 25%;
+}
+
+li {
+  color: #139eca;
+  padding: 0.1em;
+}
+
+.li-active {
+  text-decoration-line: none;
+  color: #56564f;
+}
+
+.li-others {
+  text-decoration-line: underline;
+}
+
+.li-add {
+  text-decoration-line: none;
+}
