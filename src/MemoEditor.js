@@ -1,7 +1,7 @@
 import { useLogin } from "./LoginProvider";
 
 export default function MemoEditor({ activeId, setActiveId, memos, setMemos }) {
-  const login = useLogin();
+  const { login } = useLogin();
   const activeMemo = memos.find((memo) => memo.id === activeId);
 
   function handleDelete() {

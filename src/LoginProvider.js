@@ -6,16 +6,7 @@ export function LoginProvider({ children }) {
   const [login, setLogin] = useState(false);
   return (
     <>
-      <LoginContext.Provider value={login}>
-        <div className={"login-button"}>
-          <button
-            onClick={() => {
-              setLogin(!login);
-            }}
-          >
-            {login ? "ログアウト" : "ログイン"}
-          </button>
-        </div>
+      <LoginContext.Provider value={{ login, setLogin }}>
         <div> {children} </div>
       </LoginContext.Provider>
     </>

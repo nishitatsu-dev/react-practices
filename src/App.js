@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import { LoginProvider } from "./LoginProvider.js";
+import LoginButton from "./LoginButton";
 import MemoList from "./MemoList";
 import MemoEditor from "./MemoEditor";
 
@@ -20,6 +21,7 @@ export default function App() {
   return (
     <>
       <LoginProvider>
+        <LoginButton />
         <MemoList
           activeId={activeId}
           setActiveId={setActiveId}

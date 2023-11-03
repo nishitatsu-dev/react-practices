@@ -1,7 +1,7 @@
 import { useLogin } from "./LoginProvider";
 
 export default function MemoList({ activeId, setActiveId, memos, setMemos }) {
-  const login = useLogin();
+  const { login } = useLogin();
   const allMemos = memos.map((memo) => (
     <li key={memo.id}>
       <span
