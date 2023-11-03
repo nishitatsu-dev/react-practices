@@ -22,6 +22,6 @@ export function LoginProvider({ children }) {
   );
 }
 
-export function useLoginState() {
+export function useLogin() {
   return useContext(LoginContext);
 }

@@ -1,4 +1,4 @@
-import { useLoginState } from "./LoginProvider";
+import { useLogin } from "./LoginProvider";
 
 export default function MemoEditor({ activeId, setActiveId, memos, setMemos }) {
   const activeMemo = memos.find((memo) => memo.id === activeId);
@@ -39,7 +39,7 @@ export default function MemoEditor({ activeId, setActiveId, memos, setMemos }) {
     <div className={"memo-editor"}>
       <form onSubmit={handleEditMemo}>
         <textarea name="newMemo" defaultValue={activeMemo.body} />
-        {useLoginState() && (
+        {useLogin() && (
           <div>
             <button type="submit">編集</button>
             <button type="button" onClick={handleDelete}>

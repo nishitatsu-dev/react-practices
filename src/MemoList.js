@@ -1,4 +1,4 @@
-import { useLoginState } from "./LoginProvider";
+import { useLogin } from "./LoginProvider";
 
 export default function MemoList({ activeId, setActiveId, memos, setMemos }) {
   const allMemos = memos.map((memo) => (
@@ -23,7 +23,7 @@ export default function MemoList({ activeId, setActiveId, memos, setMemos }) {
     <div className={"memo-list"}>
       <ul>
         {allMemos}
-        {useLoginState() && (
+        {useLogin() && (
           <li>
             <span className={"li-add"} onClick={handleAddMemo}>
               ＋
