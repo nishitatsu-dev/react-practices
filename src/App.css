@@ -26,6 +26,10 @@ button[type="button"] {
   width: 25%;
 }
 
+.login-button {
+  text-align: right;
+}
+
 li {
   color: #139eca;
   padding: 0.1em;
